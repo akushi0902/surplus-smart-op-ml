@@ -22,7 +22,7 @@ module "subnet" {
   name                        = var.subnet_name
   vpc_id                      = module.vpc.vpc_id
   cidr_block                  = var.subnet_cidr_block
-  availability_zone           = module.ec2.availability_zone
+  availability_zone           = var.availability_zones[0]
   map_public_ip_on_launch     = var.subnet_map_public_ip_on_launch
   assign_ipv6_address_on_creation = var.assign_ipv6_address_on_creation
   ipv6_cidr_block             = var.ipv6_cidr_block
